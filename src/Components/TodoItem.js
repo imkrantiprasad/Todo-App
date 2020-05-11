@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TodoItem() {
+export default function TodoItem(props) {
     // const styles = {
     //     backgroundColor: '#909009',
     //     fontSize: '20px',
@@ -9,7 +9,7 @@ export default function TodoItem() {
     return (
         <div className="todo-item">
             <input type="checkbox" />
-            <p>Para 1</p>
+            <p>{props.text}</p>
         </div>
 
     )
