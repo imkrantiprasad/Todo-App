@@ -16,10 +16,7 @@ class App extends Component {
     this.setState(prevState => {
       const updatedTodos = prevState.todos.map(todo => {
         if (todo.id === id) {
-          return {
-            ...todo,
-            completed: !todo.completed
-          }
+          todo.completed = !todo.completed
         }
         return todo
       })
@@ -33,7 +30,7 @@ class App extends Component {
     const todoItems = this.state.todos.map(item =>
       <TodoItem
         key={item.id}
-        text={item.text}
+        item={item}
         handleChange={this.handleChange}
       />
     )
